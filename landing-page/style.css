@@ -44,6 +44,13 @@
     background: #ff6a40;
   }
   
+  /* Focus visible pour accessibilité */
+  .nav-btn:focus-visible,
+  .btn:focus-visible {
+    outline: 3px solid #ff6a40;
+    outline-offset: 3px;
+  }
+  
   /* Hero */
   .hero {
     height: 100vh;
@@ -164,3 +171,11 @@
     transform: translateY(0);
   }
   
+  /* Réduction des animations si l'utilisateur préfère */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
